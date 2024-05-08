@@ -1,0 +1,8 @@
+node_modules
+auth/node_modules
+
+# Ignore the build directory
+build
+
+# Ignore the coverage directory
+coverage
