@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta10
+kind: Config
+metadata:
+  name: ticketing
+build:
+  artifacts:
+    - image: talalabbas84/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - infra/k8s/auth-depl.yaml
