@@ -1,14 +1,18 @@
-apiVersion: skaffold/v4beta10
+apiVersion: skaffold/v2alpha3
 kind: Config
-metadata:
-  name: ticketing
+deploy:
+  kubectl:
+    manifests:
+      - infra/k8s/*
 build:
+  local:
+    push: false
   artifacts:
     - image: talalabbas84/auth
       context: auth
       docker:
         dockerfile: Dockerfile
-manifests:
-  rawYaml:
-    - infra/k8s/auth-depl.yaml
-    - infra/k8s/ingress-srv.yaml
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
