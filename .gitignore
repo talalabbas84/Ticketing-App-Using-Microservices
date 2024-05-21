@@ -6,3 +6,5 @@ build
 
 # Ignore the coverage directory
 coverage
+
+.next

@@ -1,4 +1,5 @@
 import { json } from 'body-parser';
+// @ts-ignore
 import cookieSession from 'cookie-session';
 import express from 'express';
 import 'express-async-errors';
