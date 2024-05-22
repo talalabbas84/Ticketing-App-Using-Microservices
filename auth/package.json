@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@talalabbas84/ticketing-common": "^1.0.2",
     "@types/express": "^4.17.21",
     "cookie-session": "^2.1.0",
     "express": "^4.19.2",
